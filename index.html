@@ -177,22 +177,12 @@
       margin-bottom: 1.5rem;
     }
 
-    .hero-logo-circle {
-      width: 110px; height: 110px;
-      background: var(--green);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
+    .hero-logo-img {
+      width: 180px;
+      height: auto;
       margin: 0 auto 1.5rem;
-      border: 4px solid rgba(255,255,255,0.3);
-      box-shadow: 0 8px 32px rgba(46,158,58,0.4);
-    }
-
-    .hero-logo-circle .dt-text {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-size: 2.5rem;
-      color: white;
-      letter-spacing: -1px;
+      display: block;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.35));
     }
 
     .hero h1 {
@@ -321,7 +311,7 @@
       max-width: 1100px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
       text-align: center;
     }
@@ -774,7 +764,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#comment-ca-marche">Comment ça marche</a></li>
     <li><a href="#zone">Zone de service</a></li>
-    <li><a href="#contact" class="nav-cta">Obtenir un devis</a></li>
+    <li><a href="#contact" class="nav-cta">Obtenir une soumission</a></li>
   </ul>
 </nav>
 
@@ -784,15 +774,12 @@
   <div class="hero-wave-green2"></div>
   <div class="hero-content">
     <div class="hero-badge">Gatineau &amp; Ottawa</div>
-    <div class="hero-logo-circle">
-      <span class="dt-text">DT</span>
-    </div>
+    <img src="logo.png" alt="Débarras Tremco" class="hero-logo-img" />
     <h1>DÉBARRAS<br><span class="accent">TREMCO</span></h1>
     <p class="hero-tagline">Votre espace, libéré.</p>
     <p>Services professionnels de débarras et transport à Gatineau et Ottawa. Rapide, fiable et propre — on s'occupe de tout.</p>
     <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Obtenir un devis gratuit</a>
-      <a href="tel:8192100270" class="btn-outline">📞 819-210-0270</a>
+      <a href="#contact" class="btn-primary">Obtenir une soumission gratuite</a>
     </div>
   </div>
 </section>
@@ -801,16 +788,8 @@
 <div class="stats-strip">
   <div class="stats-grid">
     <div class="stat-item">
-      <div class="stat-num">100+</div>
-      <div class="stat-label">Clients satisfaits</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">48h</div>
+      <div class="stat-num">24h</div>
       <div class="stat-label">Délai de réponse</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">2</div>
-      <div class="stat-label">Villes desservies</div>
     </div>
     <div class="stat-item">
       <div class="stat-num">100%</div>
@@ -849,11 +828,6 @@
         <p>Enlèvement de débris de jardin, vieux matériaux de construction, balançoires, clôtures et tout ce qui encombre votre extérieur.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">⚡</div>
-        <h3>Service d'urgence</h3>
-        <p>Besoin d'un débarras rapide? On s'adapte à votre calendrier et on peut intervenir rapidement selon nos disponibilités.</p>
-      </div>
-      <div class="service-card">
         <div class="service-icon">♻️</div>
         <h3>Tri & récupération</h3>
         <p>On trie vos articles pour maximiser le recyclage et les dons. On favorise une approche responsable et écologique du débarras.</p>
@@ -878,7 +852,7 @@
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <h3>Devis gratuit</h3>
+        <h3>Soumission gratuite</h3>
         <p>On évalue votre situation et vous fournit un prix clair et sans surprise.</p>
       </div>
       <div class="step">
@@ -1013,9 +987,9 @@
       </div>
 
       <div class="contact-form">
-        <h3>Demande de devis gratuit</h3>
+        <h3>Demande de soumission gratuite</h3>
         <form id="quote-form" action="https://formsubmit.co/debarrastremco@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="Nouvelle demande de devis – Débarras Tremco" />
+          <input type="hidden" name="_subject" value="Nouvelle demande de soumission – Débarras Tremco" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value="#contact" />
           <div class="form-row">
@@ -1040,7 +1014,6 @@
               <option value="commercial">Débarras commercial</option>
               <option value="transport">Transport / déménagement</option>
               <option value="cour">Débarras de cour</option>
-              <option value="urgence">Service d'urgence</option>
               <option value="autre">Autre</option>
             </select>
           </div>
