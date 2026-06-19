@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Débarras Tremco – Services de Débarras & Transport | Gatineau & Ottawa</title>
+  <meta name="description" content="Débarras Tremco offre des services professionnels de débarras et transport à Gatineau et Ottawa. Contactez-nous au 819-210-0270." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1B2D5E;
+      --navy-dark: #111e42;
+      --green: #2E9E3A;
+      --green-light: #3BB845;
+      --green-dark: #1f7229;
+      --white: #ffffff;
+      --gray-light: #f4f6fa;
+      --gray: #e0e4ef;
+      --text: #1a1a2e;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 70px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .nav-logo-dt {
+      background: var(--green);
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      border: 2px solid white;
+    }
+
+    .nav-logo-text {
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      line-height: 1.1;
+    }
+
+    .nav-logo-text span { color: var(--green-light); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--green-light); }
+
+    .nav-cta {
+      background: var(--green);
+      color: white !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 4px;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--green-light) !important; color: white !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ─── HERO ────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #22437a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 2rem 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0;
+      height: 120px;
+      background: var(--white);
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+
+    .hero-wave-green {
+      position: absolute;
+      top: 0; left: -20%; right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, transparent 0%, var(--green) 40%, var(--green-light) 70%, transparent 100%);
+      transform: skewX(-20deg);
+    }
+
+    .hero-wave-green2 {
+      position: absolute;
+      top: 14px; left: -10%; right: 10%;
+      height: 5px;
+      background: linear-gradient(90deg, transparent 0%, var(--green-dark) 40%, var(--green) 70%, transparent 100%);
+      transform: skewX(-20deg);
+    }
+
+    .hero-content { position: relative; z-index: 2; max-width: 780px; }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(46,158,58,0.2);
+      border: 1px solid var(--green);
+      color: var(--green-light);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-logo-circle {
+      width: 110px; height: 110px;
+      background: var(--green);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem;
+      border: 4px solid rgba(255,255,255,0.3);
+      box-shadow: 0 8px 32px rgba(46,158,58,0.4);
+    }
+
+    .hero-logo-circle .dt-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 2.5rem;
+      color: white;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      color: white;
+      line-height: 1.05;
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .hero h1 .accent { color: var(--green-light); }
+
+    .hero-tagline {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: clamp(0.9rem, 2.5vw, 1.15rem);
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero p {
+      color: rgba(255,255,255,0.7);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.9rem 2rem;
+      border-radius: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(46,158,58,0.4);
+    }
+
+    .btn-primary:hover {
+      background: var(--green-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(46,158,58,0.5);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.9rem 2rem;
+      border-radius: 5px;
+      border: 2px solid rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: white;
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-2px);
+    }
+
+    /* ─── SECTION BASE ────────────────────────────────────── */
+    section { padding: 80px 2rem; }
+
+    .section-header { text-align: center; margin-bottom: 3.5rem; }
+
+    .section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--navy);
+      line-height: 1.15;
+    }
+
+    .section-title span { color: var(--green); }
+
+    .divider {
+      width: 60px; height: 4px;
+      background: linear-gradient(90deg, var(--green), var(--navy));
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    /* ─── STATS STRIP ─────────────────────────────────────── */
+    .stats-strip {
+      background: var(--navy);
+      padding: 2rem;
+    }
+
+    .stats-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .stat-item { padding: 1rem; }
+
+    .stat-num {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 2.2rem;
+      color: var(--green-light);
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 0.3rem;
+    }
+
+    /* ─── SERVICES ────────────────────────────────────────── */
+    #services { background: var(--gray-light); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 2px 12px rgba(27,45,94,0.08);
+      border-top: 4px solid var(--green);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(27,45,94,0.14);
+    }
+
+    .service-icon {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .service-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+    }
+
+    .service-card p {
+      color: #555;
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+    /* ─── HOW IT WORKS ────────────────────────────────────── */
+    #comment-ca-marche { background: white; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      counter-reset: steps;
+    }
+
+    .step {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      position: relative;
+    }
+
+    .step-num {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.2rem;
+      border: 3px solid var(--green);
+    }
+
+    .step h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .step p { color: #666; font-size: 0.9rem; line-height: 1.6; }
+
+    /* ─── WHY US ──────────────────────────────────────────── */
+    #pourquoi-nous { background: var(--navy); }
+
+    #pourquoi-nous .section-title { color: white; }
+    #pourquoi-nous .section-label { color: var(--green-light); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .why-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 1.8rem 1.5rem;
+      transition: background 0.25s;
+    }
+
+    .why-card:hover { background: rgba(255,255,255,0.1); }
+
+    .why-card .icon { font-size: 2rem; margin-bottom: 1rem; }
+
+    .why-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--green-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .why-card p { color: rgba(255,255,255,0.65); font-size: 0.9rem; line-height: 1.6; }
+
+    /* ─── ZONE DE SERVICE ─────────────────────────────────── */
+    #zone { background: var(--gray-light); }
+
+    .zone-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .zone-text p {
+      color: #555;
+      line-height: 1.75;
+      margin-bottom: 1.2rem;
+    }
+
+    .zone-cities {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .city-card {
+      background: white;
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 2px 8px rgba(27,45,94,0.08);
+      border-left: 4px solid var(--green);
+    }
+
+    .city-icon { font-size: 1.8rem; }
+
+    .city-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1rem;
+    }
+
+    .city-card p { color: #666; font-size: 0.85rem; margin-top: 0.2rem; }
+
+    /* ─── CONTACT ─────────────────────────────────────────── */
+    #contact {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #contact::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--green-dark), var(--green-light), var(--green-dark));
+    }
+
+    #contact .section-title { color: white; }
+    #contact .section-label { color: var(--green-light); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .contact-info { color: white; }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .contact-item-icon {
+      width: 48px; height: 48px;
+      border-radius: 8px;
+      background: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item-text { flex: 1; }
+
+    .contact-item-text p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-item-text a, .contact-item-text strong {
+      color: white;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: block;
+      transition: color 0.2s;
+    }
+
+    .contact-item-text a:hover { color: var(--green-light); }
+
+    .contact-phone-pair a { font-size: 1.15rem; }
+
+    /* FORM */
+    .contact-form {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+
+    .contact-form h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group { margin-bottom: 1rem; }
+
+    .form-group label {
+      display: block;
+      color: rgba(255,255,255,0.65);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.92rem;
+      padding: 0.7rem 1rem;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--green);
+      background: rgba(255,255,255,0.12);
+    }
+
+    .form-group select option { background: var(--navy); color: white; }
+
+    .form-group textarea { resize: vertical; min-height: 100px; }
+
+    .form-submit {
+      width: 100%;
+      background: var(--green);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.85rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .form-submit:hover {
+      background: var(--green-light);
+      transform: translateY(-2px);
+    }
+
+    /* ─── FOOTER ──────────────────────────────────────────── */
+    footer {
+      background: var(--navy-dark);
+      color: rgba(255,255,255,0.55);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+    }
+
+    footer .footer-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer .footer-logo span { color: var(--green-light); }
+
+    footer .social-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin: 0.8rem 0;
+    }
+
+    footer .social-links a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    footer .social-links a:hover { color: var(--green-light); }
+
+    /* ─── FLOATING CTA ────────────────────────────────────── */
+    .float-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 99;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 0.8rem 1.4rem;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 20px rgba(46,158,58,0.45);
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .float-cta:hover {
+      background: var(--green-light);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(46,158,58,0.55);
+    }
+
+    /* ─── SUCCESS MESSAGE ─────────────────────────────────── */
+    .success-msg {
+      display: none;
+      background: rgba(46,158,58,0.15);
+      border: 1px solid var(--green);
+      color: var(--green-light);
+      border-radius: 6px;
+      padding: 0.8rem 1rem;
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    /* ─── MOBILE ──────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links { display: none; flex-direction: column; gap: 0; }
+      .nav-links.open {
+        display: flex;
+        position: absolute;
+        top: 70px; left: 0; right: 0;
+        background: var(--navy-dark);
+        padding: 1rem 2rem 1.5rem;
+        gap: 1rem;
+      }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .zone-content { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .float-cta { bottom: 1rem; right: 1rem; font-size: 0.82rem; padding: 0.7rem 1.1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAV ─────────────────────────────────────────────── -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-dt">DT</div>
+    <div class="nav-logo-text">DÉBARRAS<br><span>TREMCO</span></div>
+  </a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#comment-ca-marche">Comment ça marche</a></li>
+    <li><a href="#zone">Zone de service</a></li>
+    <li><a href="#contact" class="nav-cta">Obtenir un devis</a></li>
+  </ul>
+</nav>
+
+<!-- ─── HERO ─────────────────────────────────────────────── -->
+<section class="hero" id="accueil">
+  <div class="hero-wave-green"></div>
+  <div class="hero-wave-green2"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Gatineau &amp; Ottawa</div>
+    <div class="hero-logo-circle">
+      <span class="dt-text">DT</span>
+    </div>
+    <h1>DÉBARRAS<br><span class="accent">TREMCO</span></h1>
+    <p class="hero-tagline">Votre espace, libéré.</p>
+    <p>Services professionnels de débarras et transport à Gatineau et Ottawa. Rapide, fiable et propre — on s'occupe de tout.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Obtenir un devis gratuit</a>
+      <a href="tel:8192100270" class="btn-outline">📞 819-210-0270</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── STATS ─────────────────────────────────────────────── -->
+<div class="stats-strip">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-num">100+</div>
+      <div class="stat-label">Clients satisfaits</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">48h</div>
+      <div class="stat-label">Délai de réponse</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">2</div>
+      <div class="stat-label">Villes desservies</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Service propre</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SERVICES ─────────────────────────────────────────── -->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Nos services</p>
+      <h2 class="section-title">Ce qu'on <span>fait pour vous</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>Débarras résidentiel</h3>
+        <p>Vidage complet ou partiel de maisons, appartements, condos et sous-sols. On enlève meubles, électroménagers, déchets et tout encombrant.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <h3>Débarras commercial</h3>
+        <p>Bureaux, commerces, entrepôts — on vide et nettoie vos espaces commerciaux rapidement pour minimiser les interruptions d'activité.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🚛</div>
+        <h3>Transport & déménagement</h3>
+        <p>Besoin de déplacer des articles encombrants ou d'effectuer un petit déménagement? Notre équipe se déplace avec le bon équipement.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌿</div>
+        <h3>Débarras de cour</h3>
+        <p>Enlèvement de débris de jardin, vieux matériaux de construction, balançoires, clôtures et tout ce qui encombre votre extérieur.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Service d'urgence</h3>
+        <p>Besoin d'un débarras rapide? On s'adapte à votre calendrier et on peut intervenir rapidement selon nos disponibilités.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">♻️</div>
+        <h3>Tri & récupération</h3>
+        <p>On trie vos articles pour maximiser le recyclage et les dons. On favorise une approche responsable et écologique du débarras.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOW IT WORKS ──────────────────────────────────────── -->
+<section id="comment-ca-marche">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Processus simple</p>
+      <h2 class="section-title">Comment <span>ça marche</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Contactez-nous</h3>
+        <p>Appelez-nous ou remplissez le formulaire en ligne. On vous répond rapidement.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Devis gratuit</h3>
+        <p>On évalue votre situation et vous fournit un prix clair et sans surprise.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>On intervient</h3>
+        <p>Notre équipe se présente à l'heure convenue avec le matériel nécessaire.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Espace libéré!</h3>
+        <p>On laisse l'espace propre. Vous pouvez enfin respirer et profiter de votre espace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHY US ────────────────────────────────────────────── -->
+<section id="pourquoi-nous">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Pourquoi nous choisir</p>
+      <h2 class="section-title">Un service <span>propre</span> pour un espace <span>libéré</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="icon">✅</div>
+        <h3>Prix transparents</h3>
+        <p>Pas de frais cachés. Le prix qu'on vous donne est le prix que vous payez.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon">🏆</div>
+        <h3>Travail soigné</h3>
+        <p>On traite votre propriété avec respect et on laisse l'espace propre après notre passage.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon">📅</div>
+        <h3>Flexibilité</h3>
+        <p>On s'adapte à votre horaire, week-ends inclus, pour vous offrir le meilleur service.</p>
+      </div>
+      <div class="why-card">
+        <div class="icon">🤝</div>
+        <h3>Équipe locale</h3>
+        <p>Une équipe de la région de Gatineau qui connaît le territoire et les besoins locaux.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ZONE DE SERVICE ───────────────────────────────────── -->
+<section id="zone">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Où on intervient</p>
+      <h2 class="section-title">Notre <span>zone de service</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="zone-content">
+      <div class="zone-text">
+        <p>Basés à <strong>Gatineau, Québec</strong>, nous offrons nos services de débarras et de transport dans toute la région de l'Outaouais et dans la ville d'Ottawa.</p>
+        <p>Que vous soyez situé à Gatineau, Hull, Aylmer, Buckingham ou du côté d'Ottawa — nous nous déplaçons chez vous!</p>
+        <p>Vous n'êtes pas sûr si on couvre votre secteur? <strong>Contactez-nous</strong>, on trouvera une solution.</p>
+        <a href="#contact" class="btn-primary" style="display:inline-block; margin-top:0.5rem;">Vérifier ma zone</a>
+      </div>
+      <div class="zone-cities">
+        <div class="city-card">
+          <div class="city-icon">📍</div>
+          <div>
+            <h3>Gatineau (QC)</h3>
+            <p>Hull, Aylmer, Gatineau, Buckingham, Masson-Angers</p>
+          </div>
+        </div>
+        <div class="city-card">
+          <div class="city-icon">📍</div>
+          <div>
+            <h3>Ottawa (ON)</h3>
+            <p>Centre-ville, Orléans, Kanata, Nepean, Barrhaven</p>
+          </div>
+        </div>
+        <div class="city-card">
+          <div class="city-icon">🚛</div>
+          <div>
+            <h3>Régions avoisinantes</h3>
+            <p>Pontiac, Vallée-de-la-Gatineau — contactez-nous!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ───────────────────────────────────────────── -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Contactez-nous</p>
+      <h2 class="section-title">Contactez-nous <span>aujourd'hui!</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-text contact-phone-pair">
+            <p>Téléphone</p>
+            <a href="tel:8192100270">819-210-0270</a>
+            <a href="tel:8199236014">819-923-6014</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div class="contact-item-text">
+            <p>Courriel</p>
+            <a href="mailto:debarrastremco@gmail.com">debarrastremco@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📱</div>
+          <div class="contact-item-text">
+            <p>Réseaux sociaux</p>
+            <a href="https://www.instagram.com/debarrastremco" target="_blank" rel="noopener">Instagram: @debarrastremco</a>
+            <a href="https://www.facebook.com/debarrastremco" target="_blank" rel="noopener">Facebook: debarrastremco</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🕐</div>
+          <div class="contact-item-text">
+            <p>Disponibilité</p>
+            <strong>Lundi – Samedi: 8h à 18h</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Demande de devis gratuit</h3>
+        <form id="quote-form" action="https://formsubmit.co/debarrastremco@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis – Débarras Tremco" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="#contact" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" name="prenom" placeholder="Jean" required />
+            </div>
+            <div class="form-group">
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" placeholder="Tremblay" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="819-XXX-XXXX" required />
+          </div>
+          <div class="form-group">
+            <label for="service">Type de service</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Choisissez un service...</option>
+              <option value="residential">Débarras résidentiel</option>
+              <option value="commercial">Débarras commercial</option>
+              <option value="transport">Transport / déménagement</option>
+              <option value="cour">Débarras de cour</option>
+              <option value="urgence">Service d'urgence</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Décrivez votre besoin</label>
+            <textarea id="message" name="message" placeholder="Décrivez brièvement ce dont vous avez besoin (type d'items, quantité approximative, adresse...)"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Envoyer ma demande →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-logo">DÉBARRAS <span>TREMCO</span></div>
+  <p>Votre espace, libéré. | Gatineau &amp; Ottawa</p>
+  <div class="social-links">
+    <a href="https://www.instagram.com/debarrastremco" target="_blank" rel="noopener">📸 Instagram</a>
+    <a href="https://www.facebook.com/debarrastremco" target="_blank" rel="noopener">📘 Facebook</a>
+    <a href="mailto:debarrastremco@gmail.com">✉️ Courriel</a>
+  </div>
+  <p>© 2024 Débarras Tremco. Tous droits réservés.</p>
+</footer>
+
+<!-- ─── FLOATING CTA ──────────────────────────────────────── -->
+<a href="tel:8192100270" class="float-cta">
+  📞 Appelez maintenant
+</a>
+
+<script>
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Hide float CTA near contact section
+  const floatCta = document.querySelector('.float-cta');
+  const observer = new IntersectionObserver(([e]) => {
+    floatCta.style.opacity = e.isIntersecting ? '0' : '1';
+    floatCta.style.pointerEvents = e.isIntersecting ? 'none' : 'auto';
+  }, { threshold: 0.3 });
+  observer.observe(document.getElementById('contact'));
+
+  // Smooth nav background on scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.background = window.scrollY > 50
+      ? 'rgba(17,30,66,0.97)'
+      : 'var(--navy)';
+  });
+</script>
+</body>
+</html>
