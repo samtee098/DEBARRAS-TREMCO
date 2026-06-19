@@ -784,166 +784,144 @@
   <div class="hero-wave-green2"></div>
   <div class="hero-content">
     <div class="hero-badge">Gatineau &amp; Ottawa</div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" style="width:340px;margin:0 auto 1.5rem;display:block;filter:drop-shadow(0 12px 36px rgba(0,0,0,0.55))">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="width:340px;margin:0 auto 1.5rem;display:block;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.45))">
       <defs>
-        <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id="boxG" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="#223a7a"/>
-          <stop offset="40%" stop-color="#1B2D5E"/>
-          <stop offset="100%" stop-color="#111e42"/>
-        </linearGradient>
-        <linearGradient id="cabGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#3ec44a"/>
-          <stop offset="100%" stop-color="#1f7229"/>
-        </linearGradient>
-        <linearGradient id="roofGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#2a4a90"/>
           <stop offset="100%" stop-color="#1B2D5E"/>
         </linearGradient>
-        <linearGradient id="windshield" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#d4eefa"/>
-          <stop offset="100%" stop-color="#8ec8f0"/>
+        <linearGradient id="cabG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#38b844"/>
+          <stop offset="100%" stop-color="#1e6e26"/>
         </linearGradient>
-        <linearGradient id="tireGrad" cx="40%" cy="40%" r="60%" id="tireGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#3a3a3a"/>
+        <linearGradient id="hoodG" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#2d9438"/>
+          <stop offset="100%" stop-color="#1a5e21"/>
+        </linearGradient>
+        <radialGradient id="wheelG" cx="38%" cy="35%" r="65%">
+          <stop offset="0%" stop-color="#555"/>
           <stop offset="100%" stop-color="#111"/>
+        </radialGradient>
+        <radialGradient id="hubG" cx="35%" cy="30%" r="70%">
+          <stop offset="0%" stop-color="#ddd"/>
+          <stop offset="100%" stop-color="#777"/>
+        </radialGradient>
+        <linearGradient id="windG" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#c8ecff"/>
+          <stop offset="100%" stop-color="#7bbfe0"/>
         </linearGradient>
-        <radialGradient id="hubcap" cx="40%" cy="35%" r="60%">
-          <stop offset="0%" stop-color="#cccccc"/>
-          <stop offset="100%" stop-color="#666"/>
-        </radialGradient>
-        <radialGradient id="headlight" cx="30%" cy="30%" r="70%">
-          <stop offset="0%" stop-color="#ffffff"/>
-          <stop offset="60%" stop-color="#ffe066"/>
-          <stop offset="100%" stop-color="#ffaa00" stop-opacity="0"/>
-        </radialGradient>
-        <filter id="glow">
-          <feGaussianBlur stdDeviation="2" result="blur"/>
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
+        <linearGradient id="dtBadgeG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3ec44a"/>
+          <stop offset="100%" stop-color="#196b20"/>
+        </linearGradient>
       </defs>
 
       <!-- Ombre sol -->
-      <ellipse cx="195" cy="168" rx="170" ry="10" fill="rgba(0,0,0,0.35)"/>
+      <ellipse cx="200" cy="185" rx="175" ry="10" fill="rgba(0,0,0,0.3)"/>
 
-      <!-- ══ TOIT BOÎTE CARGO ══ -->
-      <rect x="12" y="18" width="248" height="12" rx="3" fill="url(#roofGrad)"/>
-      <!-- Gouttière toit -->
-      <rect x="12" y="28" width="248" height="3" fill="#0e1d3d"/>
+      <!-- ══ BOÎTE CARGO ══ -->
+      <!-- Corps principal -->
+      <rect x="100" y="30" width="240" height="120" rx="5" fill="url(#boxG)"/>
+      <!-- Reflet toit -->
+      <rect x="102" y="32" width="236" height="20" rx="4" fill="rgba(255,255,255,0.08)"/>
+      <!-- Bande verte bas -->
+      <rect x="100" y="120" width="240" height="14" rx="0" fill="#2E9E3A"/>
+      <rect x="100" y="118" width="240" height="5" fill="#3BB845"/>
+      <!-- Lignes porte arrière -->
+      <rect x="335" y="38" width="3" height="90" rx="1" fill="rgba(0,0,0,0.4)"/>
+      <rect x="333" y="38" width="1" height="90" fill="rgba(255,255,255,0.1)"/>
+      <!-- Rivets -->
+      <circle cx="337" cy="55" r="3" fill="#0e1d3d"/>
+      <circle cx="337" cy="85" r="3" fill="#0e1d3d"/>
+      <circle cx="337" cy="115" r="3" fill="#0e1d3d"/>
 
-      <!-- ══ CORPS BOÎTE CARGO ══ -->
-      <rect x="12" y="18" width="248" height="112" rx="3" fill="url(#bodyGrad)"/>
-
-      <!-- Reflet haut -->
-      <rect x="14" y="20" width="244" height="22" rx="2" fill="rgba(255,255,255,0.07)"/>
-
-      <!-- Bande verte décorative -->
-      <rect x="12" y="100" width="248" height="14" fill="#2E9E3A"/>
-      <rect x="12" y="98" width="248" height="4" fill="#3BB845"/>
-
-      <!-- Panneau porte arrière -->
-      <rect x="18" y="34" width="4" height="76" rx="2" fill="rgba(0,0,0,0.25)"/>
-      <rect x="22" y="34" width="232" height="76" rx="1" fill="rgba(255,255,255,0.03)"/>
-
-      <!-- Rivets porte -->
-      <circle cx="18" cy="50" r="2" fill="#0e1d3d"/>
-      <circle cx="18" cy="75" r="2" fill="#0e1d3d"/>
-      <circle cx="18" cy="100" r="2" fill="#0e1d3d"/>
-
-      <!-- Texte DT -->
-      <text x="140" y="88" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="48" fill="white" opacity="0.95" letter-spacing="-2">DT</text>
-      <!-- Ombre texte -->
-      <text x="142" y="90" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="48" fill="rgba(0,0,0,0.2)" letter-spacing="-2">DT</text>
-      <text x="140" y="88" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="48" fill="white" opacity="0.95" letter-spacing="-2">DT</text>
+      <!-- Badge DT (cercle vert style logo) -->
+      <circle cx="205" cy="88" r="38" fill="url(#dtBadgeG)"/>
+      <circle cx="205" cy="88" r="38" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="3"/>
+      <circle cx="205" cy="88" r="30" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+      <text x="205" y="100" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="34" fill="white" letter-spacing="-1">DT</text>
 
       <!-- ══ CABINE ══ -->
       <!-- Corps cabine -->
-      <path d="M258,31 L258,130 L375,130 L375,88 Q372,58 342,42 Q318,30 258,31 Z" fill="url(#cabGrad)"/>
-      <!-- Reflet latéral cabine -->
-      <path d="M262,34 Q310,32 340,45 Q360,55 370,75 L370,88 Q355,68 338,57 Q310,42 265,42 Z" fill="rgba(255,255,255,0.12)"/>
+      <path d="M55,50 Q70,32 100,30 L100,150 L55,150 Z" fill="url(#cabG)"/>
+      <!-- Capot avant (hood) -->
+      <path d="M18,90 Q20,65 55,50 L55,150 L18,150 Z" fill="url(#hoodG)"/>
+      <!-- Reflet capot -->
+      <path d="M22,92 Q24,70 52,56 L54,70 Q30,82 26,102 Z" fill="rgba(255,255,255,0.12)"/>
 
       <!-- Pare-brise -->
-      <path d="M268,38 Q300,26 338,44 L338,86 Q300,90 268,86 Z" fill="url(#windshield)" opacity="0.92"/>
+      <path d="M58,52 Q80,36 98,32 L98,90 Q80,92 58,88 Z" fill="url(#windG)" opacity="0.9"/>
       <!-- Reflet pare-brise -->
-      <path d="M272,40 Q300,30 332,46 L326,60 Q300,46 276,52 Z" fill="rgba(255,255,255,0.3)"/>
+      <path d="M62,54 Q80,40 95,34 L93,50 Q78,44 64,64 Z" fill="rgba(255,255,255,0.28)"/>
       <!-- Cadre pare-brise -->
-      <path d="M268,38 Q300,26 338,44 L338,86 Q300,90 268,86 Z" fill="none" stroke="#1B2D5E" stroke-width="3"/>
+      <path d="M58,52 Q80,36 98,32 L98,90 Q80,92 58,88 Z" fill="none" stroke="#175120" stroke-width="3"/>
 
-      <!-- Montant B (milieu) -->
-      <rect x="338" y="38" width="5" height="52" rx="1" fill="#1a5c22"/>
+      <!-- Toit cabine -->
+      <path d="M55,50 Q80,36 100,30 L100,35 Q80,40 58,54 Z" fill="rgba(255,255,255,0.15)"/>
 
-      <!-- Petite fenêtre passager -->
-      <rect x="344" y="46" width="22" height="34" rx="3" fill="#8ec8f0" opacity="0.75"/>
-      <rect x="344" y="46" width="22" height="34" rx="3" fill="none" stroke="#1a5c22" stroke-width="2"/>
-      <line x1="355" y1="46" x2="355" y2="80" stroke="#1a5c22" stroke-width="1.5"/>
+      <!-- Miroir -->
+      <rect x="96" y="58" width="14" height="10" rx="2" fill="#155c1d"/>
+      <rect x="108" y="61" width="3" height="5" rx="1" fill="#0e3d15"/>
 
-      <!-- Miroir rétroviseur -->
-      <path d="M264,52 L254,52 L254,62 L264,64 Z" fill="#1f7229"/>
-      <rect x="252" y="53" width="12" height="9" rx="2" fill="#166120"/>
-
-      <!-- Panneau bas cabine -->
-      <rect x="258" y="114" width="117" height="16" rx="2" fill="#196b20"/>
-      <!-- Ligne chrome bas -->
-      <rect x="258" y="113" width="117" height="3" fill="#3BB845"/>
-
-      <!-- Phares -->
-      <rect x="366" y="54" width="14" height="18" rx="4" fill="#fffde0"/>
-      <rect x="366" y="54" width="14" height="18" rx="4" fill="url(#headlight)" filter="url(#glow)"/>
+      <!-- Phare avant -->
+      <ellipse cx="22" cy="82" rx="9" ry="7" fill="#fffde0"/>
+      <ellipse cx="22" cy="82" rx="6" ry="4" fill="#fff9c0"/>
+      <ellipse cx="21" cy="81" rx="3" ry="2" fill="white"/>
       <!-- Clignotant -->
-      <rect x="366" y="74" width="14" height="9" rx="3" fill="#ff8800"/>
-      <rect x="366" y="74" width="14" height="9" rx="3" fill="rgba(255,200,0,0.4)"/>
+      <ellipse cx="22" cy="96" rx="7" ry="5" fill="#ff8800"/>
+      <ellipse cx="22" cy="96" rx="4" ry="3" fill="#ffaa33"/>
 
-      <!-- Grille avant / pare-choc -->
-      <rect x="365" y="95" width="16" height="22" rx="3" fill="#0e1d3d"/>
-      <rect x="367" y="98" width="12" height="2" rx="1" fill="#333"/>
-      <rect x="367" y="102" width="12" height="2" rx="1" fill="#333"/>
-      <rect x="367" y="106" width="12" height="2" rx="1" fill="#333"/>
-      <!-- Pare-choc -->
-      <rect x="363" y="118" width="22" height="8" rx="3" fill="#1a1a1a"/>
+      <!-- Grille et pare-choc -->
+      <path d="M14,100 Q12,120 14,140 L55,140 L55,100 Z" fill="#175120"/>
+      <rect x="14" y="104" width="35" height="3" rx="1" fill="rgba(0,0,0,0.3)"/>
+      <rect x="14" y="110" width="35" height="3" rx="1" fill="rgba(0,0,0,0.3)"/>
+      <rect x="14" y="116" width="35" height="3" rx="1" fill="rgba(0,0,0,0.3)"/>
+      <!-- Pare-choc bas -->
+      <rect x="10" y="138" width="50" height="10" rx="3" fill="#111e42"/>
+      <rect x="12" y="140" width="46" height="3" rx="1" fill="#333"/>
+
+      <!-- Dessous cabine -->
+      <rect x="14" y="132" width="86" height="8" rx="2" fill="#0e3d15"/>
 
       <!-- Châssis bas -->
-      <rect x="12" y="128" width="363" height="6" rx="2" fill="#0a1428"/>
+      <rect x="14" y="148" width="326" height="6" rx="2" fill="#0a1428"/>
 
-      <!-- ══ ROUE ARRIÈRE ══ -->
-      <circle cx="80" cy="142" r="25" fill="#111"/>
-      <circle cx="80" cy="142" r="25" fill="url(#tireGrad)"/>
-      <!-- Flanc pneu -->
-      <circle cx="80" cy="142" r="20" fill="none" stroke="#2a2a2a" stroke-width="4"/>
-      <!-- Jante -->
-      <circle cx="80" cy="142" r="16" fill="#444"/>
-      <circle cx="80" cy="142" r="16" fill="url(#hubcap)"/>
+      <!-- ══ ROUE AVANT (gauche) ══ -->
+      <circle cx="72" cy="158" r="28" fill="#111"/>
+      <circle cx="72" cy="158" r="22" fill="url(#wheelG)"/>
+      <circle cx="72" cy="158" r="22" fill="none" stroke="#2a2a2a" stroke-width="5"/>
+      <circle cx="72" cy="158" r="15" fill="url(#hubG)"/>
       <!-- Rayons -->
-      <line x1="80" y1="126" x2="80" y2="158" stroke="#333" stroke-width="2.5"/>
-      <line x1="64" y1="142" x2="96" y2="142" stroke="#333" stroke-width="2.5"/>
-      <line x1="69" y1="131" x2="91" y2="153" stroke="#333" stroke-width="2.5"/>
-      <line x1="91" y1="131" x2="69" y2="153" stroke="#333" stroke-width="2.5"/>
-      <!-- Centre roue -->
-      <circle cx="80" cy="142" r="6" fill="#888"/>
-      <circle cx="80" cy="142" r="3" fill="#ccc"/>
-      <!-- Boulons -->
-      <circle cx="80" cy="129" r="2.5" fill="#777"/>
-      <circle cx="80" cy="155" r="2.5" fill="#777"/>
-      <circle cx="67" cy="142" r="2.5" fill="#777"/>
-      <circle cx="93" cy="142" r="2.5" fill="#777"/>
-      <!-- Cache-roue -->
-      <path d="M56,120 Q80,112 104,120 L104,128 Q80,120 56,128 Z" fill="#111e42"/>
+      <line x1="72" y1="143" x2="72" y2="173" stroke="#555" stroke-width="3"/>
+      <line x1="57" y1="158" x2="87" y2="158" stroke="#555" stroke-width="3"/>
+      <line x1="62" y1="148" x2="82" y2="168" stroke="#555" stroke-width="2.5"/>
+      <line x1="82" y1="148" x2="62" y2="168" stroke="#555" stroke-width="2.5"/>
+      <circle cx="72" cy="158" r="7" fill="#888"/>
+      <circle cx="72" cy="158" r="3.5" fill="#ccc"/>
+      <circle cx="72" cy="143" r="3" fill="#777"/>
+      <circle cx="72" cy="173" r="3" fill="#777"/>
+      <circle cx="57" cy="158" r="3" fill="#777"/>
+      <circle cx="87" cy="158" r="3" fill="#777"/>
 
-      <!-- ══ ROUE AVANT ══ -->
-      <circle cx="315" cy="142" r="25" fill="#111"/>
-      <circle cx="315" cy="142" r="25" fill="url(#tireGrad)"/>
-      <circle cx="315" cy="142" r="20" fill="none" stroke="#2a2a2a" stroke-width="4"/>
-      <circle cx="315" cy="142" r="16" fill="#444"/>
-      <circle cx="315" cy="142" r="16" fill="url(#hubcap)"/>
-      <line x1="315" y1="126" x2="315" y2="158" stroke="#333" stroke-width="2.5"/>
-      <line x1="299" y1="142" x2="331" y2="142" stroke="#333" stroke-width="2.5"/>
-      <line x1="304" y1="131" x2="326" y2="153" stroke="#333" stroke-width="2.5"/>
-      <line x1="326" y1="131" x2="304" y2="153" stroke="#333" stroke-width="2.5"/>
-      <circle cx="315" cy="142" r="6" fill="#888"/>
-      <circle cx="315" cy="142" r="3" fill="#ccc"/>
-      <circle cx="315" cy="129" r="2.5" fill="#777"/>
-      <circle cx="315" cy="155" r="2.5" fill="#777"/>
-      <circle cx="302" cy="142" r="2.5" fill="#777"/>
-      <circle cx="328" cy="142" r="2.5" fill="#777"/>
-      <path d="M291,115 Q315,107 339,115 L339,123 Q315,115 291,123 Z" fill="#1f7229"/>
+      <!-- ══ ROUE ARRIÈRE (droite) ══ -->
+      <circle cx="295" cy="158" r="28" fill="#111"/>
+      <circle cx="295" cy="158" r="22" fill="url(#wheelG)"/>
+      <circle cx="295" cy="158" r="22" fill="none" stroke="#2a2a2a" stroke-width="5"/>
+      <circle cx="295" cy="158" r="15" fill="url(#hubG)"/>
+      <line x1="295" y1="143" x2="295" y2="173" stroke="#555" stroke-width="3"/>
+      <line x1="280" y1="158" x2="310" y2="158" stroke="#555" stroke-width="3"/>
+      <line x1="285" y1="148" x2="305" y2="168" stroke="#555" stroke-width="2.5"/>
+      <line x1="305" y1="148" x2="285" y2="168" stroke="#555" stroke-width="2.5"/>
+      <circle cx="295" cy="158" r="7" fill="#888"/>
+      <circle cx="295" cy="158" r="3.5" fill="#ccc"/>
+      <circle cx="295" cy="143" r="3" fill="#777"/>
+      <circle cx="295" cy="173" r="3" fill="#777"/>
+      <circle cx="280" cy="158" r="3" fill="#777"/>
+      <circle cx="310" cy="158" r="3" fill="#777"/>
+
+      <!-- Cache-roues -->
+      <path d="M46,132 Q72,124 98,132 L98,142 Q72,134 46,142 Z" fill="#175120"/>
+      <path d="M269,132 Q295,124 321,132 L321,142 Q295,134 269,142 Z" fill="#111e42"/>
     </svg>
     <h1>DÉBARRAS<br><span class="accent">TREMCO</span></h1>
     <p class="hero-tagline">Votre espace, libéré.</p>
