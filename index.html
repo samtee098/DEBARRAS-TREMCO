@@ -54,15 +54,8 @@
     }
 
     .nav-logo-dt {
-      background: var(--green);
-      color: white;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-size: 1.1rem;
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      border: 2px solid white;
+      width: 44px; height: 44px;
+      flex-shrink: 0;
     }
 
     .nav-logo-text {
@@ -764,7 +757,18 @@
 <!-- ─── NAV ─────────────────────────────────────────────── -->
 <nav>
   <a href="#" class="nav-logo">
-    <div class="nav-logo-dt">DT</div>
+    <svg class="nav-logo-dt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+      <defs>
+        <radialGradient id="navCircleG" cx="40%" cy="35%" r="65%">
+          <stop offset="0%" stop-color="#3ec44a"/>
+          <stop offset="100%" stop-color="#1a6e22"/>
+        </radialGradient>
+      </defs>
+      <circle cx="60" cy="60" r="56" fill="url(#navCircleG)"/>
+      <circle cx="60" cy="60" r="56" fill="none" stroke="white" stroke-width="5"/>
+      <circle cx="60" cy="60" r="47" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+      <text x="60" y="76" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-style="italic" font-size="52" fill="white" letter-spacing="-2">DT</text>
+    </svg>
     <div class="nav-logo-text">DÉBARRAS<br><span>TREMCO</span></div>
   </a>
   <button class="hamburger" id="hamburger" aria-label="Menu">
