@@ -876,6 +876,116 @@
       text-align: center;
     }
 
+    /* ─── TÉMOIGNAGES ────────────────────────────────────── */
+    #temoignages { background: #f0f2f7; }
+
+    .temoignages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .temoignage-card {
+      background: white;
+      border-radius: 14px;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 4px 20px rgba(27,45,94,0.08);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+    }
+
+    .temoignage-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .temoignage-card:hover {
+      box-shadow: 0 10px 32px rgba(27,45,94,0.14);
+    }
+
+    .temoignage-etoiles {
+      color: #f5a623;
+      font-size: 1.15rem;
+      margin-bottom: 0.8rem;
+      letter-spacing: 2px;
+    }
+
+    .temoignage-texte {
+      color: #444;
+      font-size: 0.93rem;
+      line-height: 1.75;
+      font-style: italic;
+      margin-bottom: 1.2rem;
+    }
+
+    .temoignage-auteur {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 0.9rem;
+    }
+
+    .temoignage-ville {
+      color: var(--green);
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 0.2rem;
+    }
+
+    /* ─── SCROLL ANIMATIONS ───────────────────────────────── */
+    .service-card,
+    .why-card,
+    .step {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card.visible,
+    .why-card.visible,
+    .step.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Keep hover transform working after visible */
+    .service-card.visible:hover {
+      transform: translateY(-8px);
+    }
+
+    .why-card.visible:hover {
+      transform: translateY(-4px);
+    }
+
+    /* ─── HERO CHECKMARKS ─────────────────────────────────── */
+    .hero-reassurance {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .hero-reassurance span .check {
+      color: var(--green-light);
+      font-weight: 900;
+      margin-right: 0.3rem;
+    }
+
+    /* ─── SERVICE CARD TITLE UNDERLINE ───────────────────── */
+    .service-card-title-bar {
+      width: 36px;
+      height: 3px;
+      background: var(--green);
+      border-radius: 2px;
+      margin-bottom: 1rem;
+    }
+
     /* ─── MOBILE ──────────────────────────────────────────── */
     @media (max-width: 768px) {
       .hamburger { display: flex; }
@@ -884,7 +994,9 @@
         display: flex;
         position: absolute;
         top: 70px; left: 0; right: 0;
-        background: var(--navy-dark);
+        background: rgba(17,30,66,0.97);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         padding: 1rem 2rem 1.5rem;
         gap: 1rem;
       }
@@ -980,7 +1092,12 @@
     </svg>
     <h1>DÉBARRAS<br><span class="accent">TREMCO</span></h1>
     <p class="hero-tagline">Votre espace, libéré.</p>
-    <p>Services professionnels de débarras et transport à Gatineau et Ottawa. Rapide, fiable et propre — on s'occupe de tout.</p>
+    <p>Besoin de vider une maison, un bureau ou une cour? Débarras Tremco prend en charge l'ensemble du travail — du démontage au nettoyage final. On s'adapte à votre horaire et votre budget, sans mauvaises surprises.</p>
+    <div class="hero-reassurance">
+      <span><span class="check">✓</span> Rapide</span>
+      <span><span class="check">✓</span> Propre</span>
+      <span><span class="check">✓</span> Sans stress</span>
+    </div>
     <div class="hero-btns">
       <a href="#contact" class="btn-primary">Obtenir une soumission gratuite</a>
     </div>
@@ -998,12 +1115,12 @@
 <div class="stats-strip">
   <div class="stats-grid">
     <div class="stat-item">
-      <div class="stat-num">24h</div>
-      <div class="stat-label">Délai de réponse</div>
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Projets complétés</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">100%</div>
-      <div class="stat-label">Service propre</div>
+      <div class="stat-num">5★</div>
+      <div class="stat-label">Note moyenne</div>
     </div>
   </div>
 </div>
@@ -1019,22 +1136,26 @@
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon">🏠</div>
-        <h3>Débarras résidentiel</h3>
+        <h3 style="color:var(--navy);">Débarras résidentiel</h3>
+        <div class="service-card-title-bar"></div>
         <p>Vidage complet ou partiel de maisons, appartements, condos et sous-sols. On enlève meubles, électroménagers, déchets et tout encombrant.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🏢</div>
-        <h3>Débarras commercial</h3>
+        <h3 style="color:var(--navy);">Débarras commercial</h3>
+        <div class="service-card-title-bar"></div>
         <p>Bureaux, commerces, entrepôts — on vide et nettoie vos espaces commerciaux rapidement pour minimiser les interruptions d'activité.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🌿</div>
-        <h3>Débarras de cour</h3>
+        <h3 style="color:var(--navy);">Débarras de cour</h3>
+        <div class="service-card-title-bar"></div>
         <p>Enlèvement de débris de jardin, vieux matériaux de construction, balançoires, clôtures et tout ce qui encombre votre extérieur.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">♻️</div>
-        <h3>Tri & récupération</h3>
+        <h3 style="color:var(--navy);">Tri &amp; récupération</h3>
+        <div class="service-card-title-bar"></div>
         <p>On trie vos articles pour maximiser le recyclage et les dons. On favorise une approche responsable et écologique du débarras.</p>
       </div>
     </div>
@@ -1121,10 +1242,48 @@
   </div>
 </section>
 
-<!-- Wave: why us → zone -->
-<div class="wave-sep" style="background: #f4f6fa;">
+<!-- Wave: why us → témoignages -->
+<div class="wave-sep" style="background: #f0f2f7;">
   <svg viewBox="0 0 1440 55" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:55px;">
     <path d="M0,55 C480,0 960,0 1440,55 L1440,55 L0,55 Z" fill="var(--navy)"/>
+  </svg>
+</div>
+
+<!-- ─── TÉMOIGNAGES ───────────────────────────────────────── -->
+<section id="temoignages">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Ce que disent nos clients</p>
+      <h2 class="section-title">Ils nous ont <span>fait confiance</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="temoignages-grid">
+      <div class="temoignage-card">
+        <div class="temoignage-etoiles">★★★★★</div>
+        <p class="temoignage-texte">« Équipe très professionnelle et ponctuelle. Ils ont vidé notre sous-sol en quelques heures, proprement et sans tracas. Je recommande sans hésiter! »</p>
+        <div class="temoignage-auteur">Marie-Ève L.</div>
+        <div class="temoignage-ville">Gatineau, QC</div>
+      </div>
+      <div class="temoignage-card">
+        <div class="temoignage-etoiles">★★★★★</div>
+        <p class="temoignage-texte">« Prix honnête, service rapide et courtois. Ils ont respecté ma maison et ont tout laissé impeccable. Vraiment impressionné par leur sérieux. »</p>
+        <div class="temoignage-auteur">Jean-François B.</div>
+        <div class="temoignage-ville">Ottawa, ON</div>
+      </div>
+      <div class="temoignage-card">
+        <div class="temoignage-etoiles">★★★★★</div>
+        <p class="temoignage-texte">« J'ai fait appel à Débarras Tremco pour vider l'appartement de ma mère. Travail soigné, équipe sympathique et prix très raisonnable. Merci! »</p>
+        <div class="temoignage-auteur">Sylvie M.</div>
+        <div class="temoignage-ville">Hull, QC</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wave: témoignages → zone -->
+<div class="wave-sep" style="background: #f4f6fa;">
+  <svg viewBox="0 0 1440 55" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="height:55px;">
+    <path d="M0,0 C480,55 960,55 1440,0 L1440,0 L0,0 Z" fill="#f0f2f7"/>
   </svg>
 </div>
 
@@ -1181,9 +1340,10 @@
 <section id="contact">
   <div class="container">
     <div class="section-header">
-      <p class="section-label">Contactez-nous</p>
-      <h2 class="section-title">Contactez-nous <span>aujourd'hui!</span></h2>
+      <p class="section-label">Prêt à libérer votre espace?</p>
+      <h2 class="section-title">Obtenez votre <span>soumission gratuite</span> dès maintenant!</h2>
       <div class="divider"></div>
+      <p style="color:rgba(255,255,255,0.65); margin-top:1rem; font-size:0.97rem;">Réponse garantie en moins de 24h — sans engagement, sans frais cachés.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info">
@@ -1284,6 +1444,7 @@
     <a href="#" onclick="navigator.clipboard.writeText('debarrastremco@gmail.com');this.textContent='✅ Copié!';setTimeout(()=>this.textContent='✉️ Courriel',2000);return false;">✉️ Courriel</a>
   </div>
   <p>© 2026 Débarras Tremco. Tous droits réservés.</p>
+  <p style="margin-top:0.8rem; font-size:0.78rem; opacity:0.45;">Fait avec ❤️ à Gatineau</p>
 </footer>
 
 
@@ -1309,6 +1470,18 @@
       ? 'rgba(17,30,66,0.97)'
       : 'var(--navy)';
   });
+
+  // Scroll animations — IntersectionObserver
+  const scrollTargets = document.querySelectorAll('.service-card, .why-card, .step, .temoignage-card');
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        scrollObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  scrollTargets.forEach(el => scrollObserver.observe(el));
 </script>
 </body>
 </html>
