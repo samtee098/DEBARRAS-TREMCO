@@ -975,7 +975,18 @@
 <!-- ─── NAV ─────────────────────────────────────────────── -->
 <nav>
   <a href="#" class="nav-logo">
-    <img src="logo.png" alt="Débarras Tremco" style="height:50px;width:auto;" />
+    <svg class="nav-logo-dt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+      <defs>
+        <radialGradient id="navCircleG" cx="40%" cy="35%" r="65%">
+          <stop offset="0%" stop-color="#3ec44a"/>
+          <stop offset="100%" stop-color="#1a6e22"/>
+        </radialGradient>
+      </defs>
+      <circle cx="60" cy="60" r="56" fill="url(#navCircleG)"/>
+      <circle cx="60" cy="60" r="56" fill="none" stroke="white" stroke-width="5"/>
+      <circle cx="60" cy="60" r="47" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+      <text x="60" y="76" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-style="italic" font-size="52" fill="white" letter-spacing="-2">DT</text>
+    </svg>
     <div class="nav-logo-text">DÉBARRAS<br><span>TREMCO</span></div>
   </a>
   <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -1013,7 +1024,18 @@
   </div>
   <div class="hero-content">
     <div class="hero-badge">Gatineau &amp; Ottawa</div>
-    <img src="logo.png" alt="Débarras Tremco" style="width:150px;margin:0 auto 1.5rem;display:block;filter:brightness(0) invert(1) drop-shadow(0 8px 32px rgba(46,158,58,0.5));" />
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" style="width:120px;margin:0 auto 1.5rem;display:block;filter:drop-shadow(0 8px 32px rgba(46,158,58,0.5))">
+      <defs>
+        <radialGradient id="circleG" cx="40%" cy="35%" r="65%">
+          <stop offset="0%" stop-color="#3ec44a"/>
+          <stop offset="100%" stop-color="#1a6e22"/>
+        </radialGradient>
+      </defs>
+      <circle cx="60" cy="60" r="56" fill="url(#circleG)"/>
+      <circle cx="60" cy="60" r="56" fill="none" stroke="white" stroke-width="4"/>
+      <circle cx="60" cy="60" r="48" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+      <text x="60" y="76" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-style="italic" font-size="52" fill="white" letter-spacing="-2">DT</text>
+    </svg>
     <h1>DÉBARRAS<br><span class="accent">TREMCO</span></h1>
     <p class="hero-tagline">Votre espace, libéré.</p>
     <p>Services professionnels de débarras et transport à Gatineau et Ottawa. Rapide, fiable et propre — on s'occupe de tout.</p>
