@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merci – Débarras Tremco</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Open+Sans:wght@400;600&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(135deg, #111e42 0%, #1B2D5E 60%, #22437a 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 3.5rem 3rem;
+      max-width: 520px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .checkmark {
+      width: 80px; height: 80px;
+      background: linear-gradient(135deg, #3BB845, #1f7229);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 2rem;
+      font-size: 2.2rem;
+      box-shadow: 0 8px 32px rgba(46,158,58,0.45);
+    }
+    h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+    h1 span { color: #3BB845; }
+    p {
+      color: rgba(255,255,255,0.75);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    a {
+      display: inline-block;
+      background: #2E9E3A;
+      color: white;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      transition: background 0.25s, transform 0.25s;
+      box-shadow: 0 4px 16px rgba(46,158,58,0.4);
+    }
+    a:hover { background: #3BB845; transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="checkmark">✓</div>
+    <h1>Merci pour votre <span>demande!</span></h1>
+    <p>Nous avons bien reçu votre soumission et nous vous répondrons <strong style="color:white;">dès que possible</strong>.<br><br>L'équipe Débarras Tremco vous contactera sous peu pour discuter de votre projet.</p>
+    <a href="https://debarrastremco.com">Retour au site</a>
+  </div>
+</body>
+</html>
