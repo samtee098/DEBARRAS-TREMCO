@@ -1356,7 +1356,7 @@
   quoteForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const data = new FormData(quoteForm);
-    fetch(quoteForm.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+    fetch('https://formsubmit.co/ajax/debarrastremco@gmail.com', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
       .then(() => {
         quoteForm.style.display = 'none';
         document.getElementById('merci-msg').style.display = 'block';
