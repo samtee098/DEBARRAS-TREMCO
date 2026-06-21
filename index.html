@@ -1282,7 +1282,7 @@
         <form id="quote-form" action="https://formsubmit.co/debarrastremco@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="Nouvelle demande de soumission – Débarras Tremco" />
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://debarrastremco.com/merci.html" />
+          <input type="hidden" name="_next" value="https://debarrastremco.com" />
           <div class="form-row">
             <div class="form-group">
               <label for="prenom">Prénom</label>
@@ -1327,6 +1327,11 @@
           </div>
           <button type="submit" class="form-submit">Envoyer ma demande →</button>
         </form>
+        <div id="merci-msg" style="display:none; text-align:center; padding:2rem 1rem;">
+          <div style="width:70px;height:70px;background:linear-gradient(135deg,#3BB845,#1f7229);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:2rem;box-shadow:0 8px 32px rgba(46,158,58,0.45);">✓</div>
+          <h3 style="color:white;font-family:'Oswald',sans-serif;font-size:1.6rem;margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.05em;">Merci pour votre demande!</h3>
+          <p style="color:rgba(255,255,255,0.75);line-height:1.8;font-size:0.97rem;">Nous avons bien reçu votre soumission et nous vous répondrons <strong style="color:white;">dès que possible</strong>.<br>L'équipe Débarras Tremco vous contactera sous peu.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1346,6 +1351,21 @@
 
 
 <script>
+  // Form submission with thank you message
+  const quoteForm = document.getElementById('quote-form');
+  quoteForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const data = new FormData(quoteForm);
+    fetch(quoteForm.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+      .then(() => {
+        quoteForm.style.display = 'none';
+        document.getElementById('merci-msg').style.display = 'block';
+      })
+      .catch(() => {
+        quoteForm.submit();
+      });
+  });
+
   // Hamburger menu
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
